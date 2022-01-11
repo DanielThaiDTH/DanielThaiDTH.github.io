@@ -1,4 +1,15 @@
 .footer {
-    background-color: darkblue;
+    background-color: #04045a;
     color: white;
+}
+
+.footer-form {
+    background-color: #31318d;
+    color: white;
+}
+
+.msg-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
