@@ -31,7 +31,9 @@ footerForms.forEach(applyFooterInputFocusStyle);
 let prepareMessage = (ev) => {
     const name = "daniel.thai.can";
     const domain = "gmail.com";
-    ev.target.action = "mailto:" + name + "@" + domain + "?subject=" + ev.target.subject.value + "&body=" + encodeURIComponent(ev.target.msgContent.value);
+    let action = "mailto:" + name + "@" + domain + "?subject=" + ev.target.subject.value + "&body=" + encodeURIComponent(ev.target.msgContent.value);
+    window.location.href = action;
+    ev.preventDefault();
 };
 
 let sendForm = document.querySelector("#sendMsg");
