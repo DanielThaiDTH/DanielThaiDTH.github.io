@@ -5,13 +5,14 @@ html, body {
 body { 
     display: flex;
     flex-direction: column;
+    background-color: #1a1a9c;
+    color: white;
 }
 
 main {
     height: 80%;
     margin-bottom: 200px;
 }
-
 
 .footer {
     background-color: #04045a;
@@ -28,6 +29,7 @@ main {
 
 .footer-form {
     background-color: #31318d;
+    border-color: black;
     color: white;
 }
 

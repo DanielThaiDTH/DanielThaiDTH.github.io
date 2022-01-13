@@ -1,3 +1,10 @@
+/** Footer styling ************************************************************************************/
+
+/**
+ * Applies event listeners that ensure the correct styling for 
+ * the footer form.
+ * @param {HTMLElement} element 
+ */
 let applyFooterInputFocusStyle = (element) => {
     element.addEventListener("focusin", (ev) => {
         ev.target.style.backgroundColor = "#404069";
@@ -28,6 +35,13 @@ let footerForms = document.querySelectorAll(".footer-form");
 footerForms.forEach(applyFooterInputFocusStyle);
 
 
+/** Send Message Script ********************************************************************************/
+
+/**
+ * Uses the content in the form the pre-fill the email in an email client. Prevents the default submission 
+ * event in the form.
+ * @param {Event} ev 
+ */
 let prepareMessage = (ev) => {
     const name = "daniel.thai.can";
     const domain = "gmail.com";

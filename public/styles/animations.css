@@ -1,0 +1,31 @@
+@keyframes welcomeAni {
+    from { color: #1c5ec2; }
+    to { color: white; }
+}
+
+@keyframes screenup {
+    from { transform: translateY(0%); }
+    to { transform: translateY(-100%);}
+}
+
+.welcome {
+    text-align: center;
+    animation-name: welcomeAni;
+    animation-duration: 2.75s;
+    animation-iteration-count: 1;
+    font-size: 60px;
+}
+
+
+.welcome-screen {
+    position: absolute;
+    z-index: 100;
+    background-color: #1c5ec2;
+    height: 100vh;
+    width: 100vw;
+    animation-name: screenup;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
