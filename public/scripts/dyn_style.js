@@ -28,4 +28,14 @@ let footerForms = document.querySelectorAll(".footer-form");
 footerForms.forEach(applyFooterInputFocusStyle);
 
 
+let prepareMessage = (ev) => {
+    const name = "daniel.thai.can";
+    const domain = "gmail.com";
+    ev.target.action = "mailto:" + name + "@" + domain + "?subject=" + ev.target.subject.value + "&body=" + encodeURIComponent(ev.target.msgContent.value);
+};
+
+let sendForm = document.querySelector("#sendMsg");
+sendForm.onsubmit = prepareMessage;
+// sendButton.addEventListener("submit", prepareMessage);
+
 

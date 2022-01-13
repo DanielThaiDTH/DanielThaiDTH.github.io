@@ -12,6 +12,7 @@ main {
     margin-bottom: 200px;
 }
 
+
 .footer {
     background-color: #04045a;
     color: white;
@@ -19,6 +20,11 @@ main {
     margin: 0;
 }
 
+.footer-text {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
 
 .footer-form {
     background-color: #31318d;
