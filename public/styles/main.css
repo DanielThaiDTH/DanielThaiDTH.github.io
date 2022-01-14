@@ -14,6 +14,11 @@ main {
     margin-bottom: 200px;
 }
 
+.card {
+    width: 80vw;
+    box-shadow: 7px 5px 10px #04045a;
+}
+
 .footer {
     background-color: #04045a;
     color: white;
