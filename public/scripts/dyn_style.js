@@ -1,3 +1,25 @@
+/** Welcome styling ************************************************************************************/
+
+let initialView = true;
+let lastScrollYPos = window.scrollY;
+
+if (lastScrollYPos > 0) {
+    initialView = false;
+    let screen = document.querySelector(".welcome-screen");
+    screen.classList.remove("welcome-screen");
+    screen.classList.add("welcome-screen-noview");
+}
+
+document.addEventListener("scroll", (e)=>{
+    if (initialView && lastScrollYPos < window.scrollY) {
+        let screen = document.querySelector(".welcome-screen");
+        screen.classList.remove("welcome-screen");
+        screen.classList.add("welcome-screen-immediate");
+        initialView = false;
+    }
+});
+
+
 /** Footer styling ************************************************************************************/
 
 /**

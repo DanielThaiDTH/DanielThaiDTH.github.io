@@ -1,5 +1,5 @@
 @keyframes welcomeAni {
-    from { color: #1c5ec2; }
+    from { color: var(--main-blue); }
     to { color: white; }
 }
 
@@ -21,7 +21,7 @@
 .welcome-screen {
     position: absolute;
     z-index: 100;
-    background-color: #1c5ec2;
+    background-color: var(--main-blue);
     height: 100vh;
     width: 100vw;
     animation-name: screenup;
@@ -30,4 +30,26 @@
     animation-delay: 2.5s;
     animation-fill-mode: forwards;
     box-shadow: 2px 6px 20px black;
+}
+
+
+.welcome-screen-immediate {
+    position: absolute;
+    z-index: 100;
+    background-color: var(--main-blue);
+    height: 100vh;
+    width: 100vw;
+    animation-name: screenup;
+    animation-duration: 3.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 2px 6px 20px black;
+}
+
+
+.welcome-screen-noview {
+    position: absolute;
+    top: -120vh;
+    display: none;
+    height: 0;
 }
