@@ -37,6 +37,7 @@ main {
 
 .link {
     color: white;
+    font-size: 14pt;
     text-decoration: none;
     padding: 12px 0px;
 }
@@ -78,11 +79,25 @@ a.anchor {
     color: var(--text-highlight);
 }
 
+span.rounded-pill {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+#skill-list .rounded-pill {
+    font-size: 16pt;
+    margin: 10px 5px;
+}
+
+#skill-legend {
+    font-size: 18pt;
+}
+
 .footer {
     background-color: var(--content-blue);
     color: white;
     flex-shrink: 0;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .footer-text {
@@ -101,4 +116,17 @@ a.anchor {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.external-link {
+    margin-top: 30px;
+}
+
+.external-link-desc {
+    text-decoration: none;
+    color: white;
+}
+
+.external-link-desc:hover {
+    color: var(--text-highlight);
 }

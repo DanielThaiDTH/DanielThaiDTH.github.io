@@ -40,7 +40,7 @@
     height: 100vh;
     width: 100vw;
     animation-name: screenup;
-    animation-duration: 3.2s;
+    animation-duration: 3.1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     box-shadow: 2px 6px 20px black;
