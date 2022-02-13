@@ -1,23 +1,29 @@
 /** Welcome styling ************************************************************************************/
 
 let initialView = true;
-let lastScrollYPos = window.scrollY;
 
-if (lastScrollYPos > 0) {
-    initialView = false;
-    let screen = document.querySelector(".welcome-screen");
-    screen.classList.remove("welcome-screen");
-    screen.classList.add("welcome-screen-noview");
-}
-
-document.addEventListener("scroll", (e)=>{
-    if (initialView && lastScrollYPos < window.scrollY) {
-        let screen = document.querySelector(".welcome-screen");
-        screen.classList.remove("welcome-screen");
-        screen.classList.add("welcome-screen-immediate");
+const welcomeAnimation = () => {
+    let lastScrollYPos = window.scrollY;
+    
+    if (lastScrollYPos > 0) {
         initialView = false;
+    } else {
+        let screen = document.querySelector(".welcome-screen-noview");
+        screen.classList.remove("welcome-screen-noview");
+        screen.classList.add("welcome-screen");
     }
-});
+    
+    document.addEventListener("scroll", (e)=>{
+        if (initialView && lastScrollYPos < window.scrollY) {
+            let screen = document.querySelector(".welcome-screen");
+            screen.classList.remove("welcome-screen");
+            screen.classList.add("welcome-screen-immediate");
+            initialView = false;
+        }
+    });
+};
+
+window.onload = welcomeAnimation;
 
 
 /** Footer styling ************************************************************************************/
