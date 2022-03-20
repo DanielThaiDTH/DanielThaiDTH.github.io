@@ -1,16 +1,13 @@
 /** Welcome styling ************************************************************************************/
-
-let initialView = true;
-
 const welcomeAnimation = () => {
+    let initialView = true;
     let lastScrollYPos = window.scrollY;
     
     if (lastScrollYPos > 0) {
         initialView = false;
-    } else {
-        let screen = document.querySelector(".welcome-screen-noview");
-        screen.classList.remove("welcome-screen-noview");
-        screen.classList.add("welcome-screen");
+        let screen = document.querySelector(".welcome-screen");
+        screen.classList.remove("welcome-screen");
+        screen.classList.add("welcome-screen-noview");
     }
     
     document.addEventListener("scroll", (e)=>{
@@ -23,7 +20,10 @@ const welcomeAnimation = () => {
     });
 };
 
-window.onload = welcomeAnimation;
+window.onload = (ev) => {
+    console.log("Loaded, refered from " + document.referrer);
+    welcomeAnimation();
+};
 
 
 /** Footer styling ************************************************************************************/
